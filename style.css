@@ -1,0 +1,123 @@
+/* ------------------ AUTH PAGES ------------------ */
+body {
+    background: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+.center-box {
+    width: 350px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 100px auto;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.center-box input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+.center-box button {
+    width: 95%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.link {
+    color: #3498db;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.error {
+    color: red;
+}
+
+/* ------------------ MAIN PAGE ------------------ */
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.city-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.map-container {
+    height: 450px;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.compare-container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* ------------------ DARK MODE ------------------ */
+
+body.dark {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark .city-card,
+.dark .compare-container {
+    background: #2c2c2c;
+    color: white;
+}
+
+.toggle-dark {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    background: black;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.logout-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: red;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}

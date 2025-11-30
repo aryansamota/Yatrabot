@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YatraBot - Travel AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+
+<div id="loginPage" class="center-box">
+    <h2>Login</h2>
+
+    <input id="loginUser" placeholder="Username">
+    <input id="loginPass" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="loginError" class="error"></p>
+
+    <p>
+        <a onclick="showSignup()" class="link">Create Account</a> |
+        <a onclick="showForgot()" class="link">Forgot Password?</a>
+    </p>
+</div>
+
+
+<div id="signupPage" class="center-box" style="display:none;">
+    <h2>Signup</h2>
+
+    <input id="signUser" placeholder="Create Username">
+    <input id="signPass" type="password" placeholder="Create Password">
+
+    <button onclick="signup()">Signup</button>
+
+    <p class="link" onclick="showLogin()">Back to Login</p>
+</div>
+
+
+<div id="forgotPage" class="center-box" style="display:none;">
+    <h2>Reset Password</h2>
+
+    <input id="resetPass" type="password" placeholder="New Password">
+
+    <button onclick="resetPassword()">Reset</button>
+
+    <p class="link" onclick="showLogin()">Back to Login</p>
+</div>
+
+
+<div id="mainPage" style="display:none;">
+
+    <button class="toggle-dark" onclick="toggleMode()">🌙</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+    <h1>Welcome to YatraBot - AI-Powered Travel Companion</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Search for a city...">
+        <button onclick="searchCity()">Search</button>
+    </div>
+
+    <div class="compare-container">
+        <h3>Compare Cities</h3>
+        <select id="city1"><option value="">Select City 1</option></select>
+        <select id="city2"><option value="">Select City 2</option></select>
+        <button onclick="compareCities()">Compare</button>
+        <div id="comparisonResult"></div>
+    </div>
+
+    <div class="city-grid" id="cities"></div>
+
+    <div id="map" class="map-container"></div>
+</div>
+
+<script src="a.js"></script>
+</body>
+</html>
